@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EcoSense</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <img class="" src="img/nome.png" alt="EcoSense">
+      <img src="img/Logo.png" alt="Ícone ES">
+    </div>
+  </header>
+
+  <main>
+    <section class="history">
+      <h2>Histórico de vazamentos</h2>
+
+      <div class="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="img/Planta-vazamento.png" alt="Planta 1">
+            <p>Vazamento de água (Local: banheiro da suíte).</p>
+          </div>
+          <div class="carousel-item">
+            <img src="img/Planta.png" alt="Planta 2">
+            <p>Vazamento de água (Local: cozinha).</p>
+          </div>
+          <div class="carousel-item">
+            <img src="img/Planta3.png" alt="Planta 3">
+            <p>Vazamento de água (Local: área de serviço).</p>
+          </div>
+        </div>
+
+        <button class="prev" onclick="prevSlide()">❮</button>
+        <button class="next" onclick="nextSlide()">❯</button>
+      </div>
+    </section>
+
+    <section class="options">
+      <button class="option-btn">📝 Instruções</button>
+      <button class="option-btn">⚙️ Configurar notificação</button>
+      <button class="option-btn">💬 Assistência técnica</button>
+    </section>
+  </main>
+
+<!-- Obs.: Não funcionou -->
+  <nav class="bottom-nav">
+    <button>🏠</button>
+    <button>🔍</button>
+    <button class="notification">🔔<span>1</span></button>
+    <button>☰</button>
+  </nav>
+<script src="assets/js/script.js"></script>
+</body>
+</html>
