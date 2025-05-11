@@ -1,0 +1,129 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+
+  header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #3e9679;
+  }
+
+   /* Navegação inferior */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #10744C;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+  }
+  
+  .bottom-nav button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .bottom-nav a img {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .bottom-nav a:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+    /* ou adicione sombra, se preferir: */
+    /* filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); */
+  }
+
+  /* Menu flutuante */
+.menu-float {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1001;
+  }
+  
+  .menu-float button {
+    background-color: #10744C;
+    color: white;
+    border: none;
+    font-size: 26px;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-float button:hover {
+    background-color: #0d5c3a;
+  }
+  
+  /* Overlay */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1000;
+  }
+  
+  /* Painel lateral */
+  .menu-panel {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 240px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 1002;
+    padding-top: 60px;
+  }
+  
+  .menu-panel ul {
+    list-style: none;
+    padding: 0 20px;
+  }
+  
+  .menu-panel ul li {
+    margin-bottom: 20px;
+  }
+  
+  .menu-panel ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #10744C;
+    font-weight: bold;
+    display: block;
+  }
+
+    .menu-panel button {
+    text-decoration: none;
+    font-size: 16px;
+    color: #10744C;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .configuracao {
+  text-decoration: none;
+  font-size: 16px;
+  color: #10744C;
+  font-weight: bold;
+  display: block;
+}

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Notificações - Eco'Sense</title>
+  <link rel="stylesheet" href="assets/css/style-notificacao.css">
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="inicio.html">
+        <img class="voltar" src="assets/img/voltar.png" alt="Chat" class="icon-left">
+      </a>
+      <h1>Notificações</h1>
+      <img src="assets/img/Logo.png" alt="Logo ES" class="icon-right">
+    </div>
+  </header>
+
+  <main class="notificacoes">
+    <div class="notificacao" onclick="mostrarDetalhes(0)">
+      <img src="assets/img/Logo.png" alt="Ícone">
+      <div>
+        <h2>Vazamento no banheiro da suíte</h2>
+        <p>Detectamos um vazamento no banheiro da suíte...</p>
+      </div>
+    </div>
+
+    <div class="notificacao" onclick="mostrarDetalhes(1)">
+      <img src="assets/img/Logo.png" alt="Ícone">
+      <div>
+        <h2>Vazamento de gás na cozinha</h2>
+        <p>Identificamos um possível vazamento de gás...</p>
+      </div>
+    </div>
+
+    <div class="notificacao" onclick="mostrarDetalhes(2)">
+      <img src="assets/img/Logo.png" alt="Ícone">
+      <div>
+        <h2>Vazamento na área de serviço</h2>
+        <p>Eco’Sense detectou água na área de serviço...</p>
+      </div>
+    </div>
+
+    <div class="notificacao" onclick="mostrarDetalhes(3)">
+      <img src="assets/img/Logo.png" alt="Ícone">
+      <div>
+        <h2>Vazamento de gás no aquecedor</h2>
+        <p>Alerta: gás no banheiro social...</p>
+      </div>
+    </div>
+  </main>
+
+  <section id="mensagem-detalhe" class="mensagem">
+    <div class="conteudo">
+      <button class="fechar" onclick="fecharMensagem()">×</button>
+      <div id="mensagem-texto"></div>
+    </div>
+  </section>
+
+  <nav class="bottom-nav">
+    <a href="inicio.html"><img src="assets/img/Inicio.png" alt="Início"></a>
+    <a href="pesquisa.html"><img src="assets/img/search.png" alt="Pesquisar"></a>
+    <a href="notificacoes.html"><img src="assets/img/notificação.png" alt="Notificações"></a>
+
+  <!-- Botão de menu flutuante -->
+  <div class="menu-float">
+    <button id="menuToggle">☰</button>
+  </div>
+
+  <!-- Overlay e menu lateral -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-panel" id="menuPanel">
+    <ul>
+      <li><a href="perfil.html">👤 Perfil</a></li>
+      <li>
+        <button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button>
+      </li>
+      <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </div>
+ </nav>
+
+  <script src="assets/js/notficacao.js"></script>
+</body>
+</html>

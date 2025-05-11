@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil - EcoSense</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="inicio.html">
+        <img class="voltar" src="assets/img/voltar.png" alt="Chat" class="icon-left">
+      </a>
+      <h1>Perfil</h1>
+      <img src="assets/img/Logo.png" alt="Logo ES" class="icon-right">
+    </div>
+  </header>
+
+  <!-- Conteúdo principal -->
+  <main class="perfil-container">
+    <div class="perfil-avatar">
+      <img src="assets/img/logo com nome.png" alt="Foto do usuário">
+    </div>
+
+    <div class="perfil-info">
+      <h2>João da Silva</h2>
+      <p><strong>Email:</strong> joao.silva@email.com</p>
+      <p><strong>Endereço:</strong> Rua das Árvores, 123 - São Paulo</p>
+    </div>
+  </main>
+
+  <!-- Navegação inferior -->
+  <nav class="bottom-nav">
+    <a href="inicio.html"><img src="assets/img/Inicio.png" alt="Início"></a>
+    <a href="pesquisa.html"><img src="assets/img/search.png" alt="Pesquisar"></a>
+    <a href="#"><img src="assets/img/notificação.png" alt="Notificações"></a>
+    <!-- Botão de menu flutuante -->
+    <div class="menu-float">
+        <button id="menuToggle">☰</button>
+      </div>
+  
+      <!-- Overlay e menu lateral -->
+      <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-panel" id="menuPanel">
+    <ul>
+      <li><a href="perfil.html">👤 Perfil</a></li>
+      <li>
+        <button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button>
+      </li>
+      <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </div> 
+    </nav>
+</body>
+
+<script src="assets/js/script.js"></script>
+</html>

@@ -1,58 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>EcoSense</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Login - Eco’Sense</title>
+  <link rel="stylesheet" href="assets/css/style-login.css" />
 </head>
 <body>
-  <header>
-    <div class="top-bar">
-      <img class="" src="img/nome.png" alt="EcoSense">
-      <img src="img/Logo.png" alt="Ícone ES">
+    <div>
+        <img src="assets/img/logo com nome.png" alt="Logo Eco'Sense" class="logo" />
     </div>
-  </header>
+    <div class="login-box">
+      
+      <h1>Bem-vindo(a) ao Eco’Sense!</h1>
 
-  <main>
-    <section class="history">
-      <h2>Histórico de vazamentos</h2>
-
-      <div class="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/Planta-vazamento.png" alt="Planta 1">
-            <p>Vazamento de água (Local: banheiro da suíte).</p>
-          </div>
-          <div class="carousel-item">
-            <img src="img/Planta.png" alt="Planta 2">
-            <p>Vazamento de água (Local: cozinha).</p>
-          </div>
-          <div class="carousel-item">
-            <img src="img/Planta3.png" alt="Planta 3">
-            <p>Vazamento de água (Local: área de serviço).</p>
-          </div>
-        </div>
-
-        <button class="prev" onclick="prevSlide()">❮</button>
-        <button class="next" onclick="nextSlide()">❯</button>
+      <div class="input-group">
+        <input type="email" placeholder="E-mail:" />
+        <img src="assets/img/usuario.png" alt="Ícone Usuário" />
       </div>
-    </section>
 
-    <section class="options">
-      <button class="option-btn">📝 Instruções</button>
-      <button class="option-btn">⚙️ Configurar notificação</button>
-      <button class="option-btn">💬 Assistência técnica</button>
-    </section>
-  </main>
+      <div class="input-group">
+        <input type="password" id="senha" placeholder="Senha:" />
+        <img src="assets/img/ver-senha.png" id="toggleSenha" alt="Ícone Senha" />
+      </div>      
+      
 
-<!-- Obs.: Não funcionou -->
-  <nav class="bottom-nav">
-    <button>🏠</button>
-    <button>🔍</button>
-    <button class="notification">🔔<span>1</span></button>
-    <button>☰</button>
-  </nav>
-<script src="assets/js/script.js"></script>
+      <a href="#" class="link">Alterar e-mail e senha.</a>
+
+      <a href="inicio.html">
+        <button class="entrar-btn">Entrar</button>
+      </a>
+    </div>
+
+    <div class="home-indicator"></div>
+  </div>
+  <script src="assets/js/login.js"></script>
 </body>
 </html>

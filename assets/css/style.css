@@ -11,15 +11,33 @@ body {
   color: #333;
 }
 
-header .top-bar {
+.top-bar {
+  position: relative;
+  height: 60px; /* ajuste conforme necessário */
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
-  padding: 16px;
+  padding: 0 16px;
+  background-color: white; /* cor de fundo similar à imagem */
+}
+
+.nome-central {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 24px; /* ajuste conforme necessário */
+}
+
+.logoEcoSense {
+  height: 28px; /* ajuste conforme necessário */
 }
 
 .history {
   padding: 16px;
+  background-color: #d3f0e5; /* Cor de fundo que cobre toda a seção */
+  border-radius: 12px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .history h2 {
@@ -33,6 +51,7 @@ header .top-bar {
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  padding: 10px;
 }
 
 .carousel-inner {
@@ -106,13 +125,334 @@ header .top-bar {
   cursor: pointer;
 }
 
-.notification span {
-  position: absolute;
-  top: -4px;
-  right: -10px;
-  background-color: red;
-  color: white;
-  font-size: 12px;
-  padding: 2px 6px;
-  border-radius: 50%;
+.bottom-nav a img {
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
+
+.bottom-nav a:hover img {
+  transform: scale(1.1);
+  opacity: 0.8;
+  /* ou adicione sombra, se preferir: */
+  /* filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); */
+}
+
+.notifications {
+  padding: 16px;
+}
+
+.notifications h2 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.notification-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.notification-card:hover {
+  transform: scale(1.02);
+}
+
+.notification-card img {
+  width: 40px;
+  height: 40px;
+}
+
+.notification-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.notification-text strong {
+  color: #10744C;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.mensagem-detalhada {
+  padding: 16px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.mensagem-detalhada .imagem-alerta {
+  display: block;
+  margin: 20px auto 0;
+  width: 80px;
+}
+
+ /* Topo */
+  header {
+    background-color: white;
+    
+    border-bottom: 2px solid #3e9679;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .voltar {
+    height: 20px; 
+  }
+  
+  .icon-left,
+  .icon-right {
+    width: 24px;
+    height: 24px;
+  }
+  
+  header h1 {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.25rem;
+    color: #3e9679;
+  }
+
+ /* Menu flutuante */
+.menu-float {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    z-index: 1001;
+  }
+  
+  .menu-float button {
+    background-color: #10744C;
+    color: white;
+    border: none;
+    font-size: 26px;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+  
+  .menu-float button:hover {
+    background-color: #0d5c3a;
+  }
+  
+  /* Overlay */
+  .menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    z-index: 1000;
+  }
+  
+  /* Painel lateral */
+  .menu-panel {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    width: 240px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 1002;
+    padding-top: 60px;
+  }
+  
+  .menu-panel ul {
+    list-style: none;
+    padding: 0 20px;
+  }
+  
+  .menu-panel ul li {
+    margin-bottom: 20px;
+  }
+  
+  .menu-panel ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #10744C;
+    font-weight: bold;
+    display: block;
+  }
+
+    .menu-panel button {
+    text-decoration: none;
+    font-size: 16px;
+    color: #10744C;
+    font-weight: bold;
+    display: block;
+  }
+  
+  .configuracao {
+  text-decoration: none;
+  font-size: 16px;
+  color: #10744C;
+  font-weight: bold;
+  display: block;
+}
+
+.perfil-container {
+  padding: 20px;
+  text-align: center;
+}
+
+.perfil-avatar img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #10744C;
+  margin-bottom: 16px;
+}
+
+.perfil-info h2 {
+  font-size: 20px;
+  color: #10744C;
+  margin-bottom: 8px;
+}
+
+.perfil-info p {
+  font-size: 15px;
+  margin: 4px 0;
+}
+
+.perfil-botoes {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 20px;
+}
+
+.perfil-botoes .option-btn {
+  background-color: #d3f0e5;
+  color: #10744C;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+.perfil-botoes .option-btn:hover {
+  background-color: #b8e5d4;
+}
+
+.input-group {
+  position: relative;
+  width: 100%;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.input-group img {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.termos-container {
+  padding: 20px;
+}
+
+h2 {
+  color: #10744C;
+  margin-bottom: 20px;
+}
+
+.termos-texto {
+  max-height: 60vh;
+  overflow-y: auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.termos-texto h3 {
+  margin-top: 16px;
+  color: #10744C;
+}
+
+.termos-texto p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.final {
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.aceitar-btn {
+  display: block;
+  width: 100%;
+  margin-top: 24px;
+  padding: 12px;
+  background-color: #10744C;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.aceitar-btn:hover {
+  background-color: #0c5e3a;
+}
+
+ /* Topo */
+  header {
+    background-color: white;
+    padding: 1rem;
+    border-bottom: 2px solid #3e9679;
+  }
+  
+  .header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .voltar {
+    height: 20px; 
+  }
+  
+  .icon-left,
+  .icon-right {
+    width: 24px;
+    height: 24px;
+  }
+  

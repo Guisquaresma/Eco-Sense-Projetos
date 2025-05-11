@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoSense</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top-bar">
+        <img class="nome-central" src="assets/img/nome.png" alt="EcoSense" />
+        <img class="logoEcoSense" src="assets/img/Logo.png" alt="Ícone EcoSense" />
+      </div>
+    </header>
+
+    <main>
+      <section class="history">
+        <h2>Histórico de vazamentos</h2>
+
+        <div class="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/Banheiro Suite.png" alt="Planta 1" />
+              <p>Vazamento de água (Local: banheiro da suíte).</p>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/Cozinha.png" alt="Planta 2" />
+              <p>Vazamento de gás (Local: cozinha).</p>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/Banheiro.png" alt="Planta 3" />
+              <p>Vazamento de água (Local: Banheiro).</p>
+            </div>
+          </div>
+
+          <button class="prev" onclick="prevSlide()">❮</button>
+          <button class="next" onclick="nextSlide()">❯</button>
+        </div>
+      </section>
+
+      <section class="options">
+        <a href="instrucoes.html">
+          <button class="option-btn">📝 Instruções</button>
+        </a>
+        <a href="#">
+          <button class="option-btn" onclick="redirecionarParaConfiguracoes()">⚙️ Configurar notificação</button>
+        </a>
+        <a href="assistencia-tec.html">
+          <button class="option-btn">💬 Assistência técnica</button>
+        </a>
+      </section>
+    </main>
+
+    <!-- Icones atalhos -->
+    <nav class="bottom-nav">
+      <a href="inicio.html">
+        <img src="assets/img/Inicio.png" alt="Inicio" />
+      </a>
+      <a href="pesquisa.html">
+        <img src="assets/img/search.png" alt="" />
+      </a>
+      <a href="notificacao.html">
+        <img src="assets/img/notificação.png" alt="Notificação" />
+      </a>
+  <!-- Botão de menu flutuante -->
+  <div class="menu-float">
+    <button id="menuToggle">☰</button>
+  </div>
+
+  <!-- Overlay e menu lateral -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-panel" id="menuPanel">
+    <ul>
+      <li><a href="perfil.html">👤 Perfil</a></li>
+      <li>
+        <button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button>
+      </li>
+      <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </div>
+    </nav>
+  </body>
+  <script src="assets/js/script.js"></script>
+
+</html>

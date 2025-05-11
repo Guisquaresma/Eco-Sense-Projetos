@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Detalhe da Notificação</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="top-bar">
+      <a href="notificacoes.html" class="voltar">←</a>
+      <h2 class="titulo-central">Notificações</h2>
+      <img class="logo-dir" src="assets/img/Logo.png" alt="Ícone ES">
+    </div>
+  </header>
+
+  <main>
+    <section class="mensagem-detalhada">
+      <p id="mensagemCompleta"></p>
+      <img src="assets/img/alerta.png" alt="Alerta" class="imagem-alerta">
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="inicio.html"><img src="assets/img/Inicio.png" alt="Início"></a>
+    <a href="pesquisa.html"><img src="assets/img/search.png" alt="Pesquisa"></a>
+    <a href="notificacoes.html"><img src="assets/img/notificação.png" alt="Notificações"></a>
+    <!-- Botão de menu flutuante -->
+    <div class="menu-float">
+      <button id="menuToggle">☰</button>
+    </div>
+
+    <!-- Overlay e menu lateral -->
+    <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-panel" id="menuPanel">
+    <ul>
+      <li><a href="perfil.html">👤 Perfil</a></li>
+      <li>
+        <button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button>
+      </li>
+      <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </div>
+    </nav>
+
+  <script src="assets/js/detalhe.js"></script>
+</body>
+</html>

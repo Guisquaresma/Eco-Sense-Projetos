@@ -1,40 +1,3 @@
-
-//index 
-let currentIndex = 0;
-const items = document.querySelectorAll('.carousel-item');
-
-function showSlide(index) {
-  if (index >= items.length) currentIndex = 0;
-  if (index < 0) currentIndex = items.length - 1;
-
-  const newTransform = -currentIndex * 100 + "%";
-  document.querySelector('.carousel-inner').style.transform = `translateX(${newTransform})`;
-}
-
-function nextSlide() {
-  currentIndex++;
-  showSlide(currentIndex);
-}
-
-function prevSlide() {
-  currentIndex--;
-  showSlide(currentIndex);
-}
-
-// Login 
-function toggleSenha() {
-    const input = document.getElementById('senhaInput');
-    const icon = document.getElementById('toggleSenhaIcon');
-
-    if (input.type === 'password') {
-        input.type = 'text';
-        icon.src = 'eye-off-icon.png'; // troca para ícone de "ocultar"
-    } else {
-        input.type = 'password';
-        icon.src = 'eye-icon.png'; // volta para ícone de "ver"
-    }
-}
-
 const mensagens = [
   {
     titulo: "Vazamento no banheiro da suíte",
@@ -90,17 +53,14 @@ const mensagens = [
   }
 ];
 
-function toggleMensagem(index) {
-  const mensagens = document.querySelectorAll('.mensagem-detalhada');
-  mensagens.forEach((msg, i) => {
-    if (i === index) {
-      msg.classList.toggle('ativa');
-      msg.classList.toggle('oculto');
-    } else {
-      msg.classList.remove('ativa');
-      msg.classList.add('oculto');
-    }
-  });
+function mostrarDetalhes(index) {
+  const mensagem = mensagens[index];
+  document.getElementById("mensagem-texto").innerText = mensagem.texto;
+  document.getElementById("mensagem-detalhe").style.display = "flex";
+}
+
+function fecharMensagem() {
+  document.getElementById("mensagem-detalhe").style.display = "none";
 }
 
 // Menu interativo
@@ -121,8 +81,3 @@ menuOverlay.addEventListener('click', () => {
 function redirecionarParaConfiguracoes() {
     window.location.href = 'intent://#Intent;action=android.settings.APPLICATION_DETAILS_SETTINGS;scheme=package;package=com.seuapp.pacote;end';
 }
-
-    function aceitarTermos() {
-      localStorage.setItem("termosAceitos", "true");
-      window.location.href = "inicio.html"; // vá para a tela inicial ou dashboard
-    }

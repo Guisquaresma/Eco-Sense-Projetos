@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instruções - EcoSense</title>
+  <link rel="stylesheet" href="assets/css/style-instrucoes.css" />
+</head>
+<body>
+
+  <header>
+    <div class="header-content">
+      <a href="inicio.html">
+        <img class="voltar" src="assets/img/voltar.png" alt="Chat" class="icon-left">
+      </a>
+      <h1>Instruções</h1>
+      <img src="assets/img/Logo.png" alt="Logo ES" class="icon-right">
+    </div>
+  </header>
+
+  <main>
+    <section class="instrucoes-section">
+      <h2>Como usar o EcoSense</h2>
+
+      <div class="passos-container">
+        <div class="passo-card" onclick="toggleMensagem(0)">
+          <img src="assets/img/conexão_Sensores.png" alt="Conectar" />
+          <div class="passo-texto">
+            <strong>1. Conecte os sensores</strong>
+            <span>Clique para ver como conectar corretamente os sensores no local.</span>
+          </div>
+        </div>
+        <div class="mensagem-detalhada oculto">
+          Certifique-se de que os sensores de água e gás estejam firmemente instalados nos pontos recomendados da residência. Consulte o manual para instalação correta.
+        </div>
+
+        <div class="passo-card" onclick="toggleMensagem(1)">
+          <img src="assets/img/monitoramento.png" alt="Monitorar" />
+          <div class="passo-texto">
+            <strong>2. Monitore em tempo real</strong>
+            <span>Clique para ver como acompanhar o status no app.</span>
+          </div>
+        </div>
+        <div class="mensagem-detalhada oculto">
+          Acesse a aba "Histórico de Vazamentos" para ver registros e receber alertas em tempo real sobre qualquer detecção de vazamento.
+        </div>
+
+        <div class="passo-card" onclick="toggleMensagem(2)">
+          <img src="assets/img/configuração.png" alt="Alertas" />
+          <div class="passo-texto">
+            <strong>3. Configure alertas</strong>
+            <span>Clique para personalizar notificações de vazamento.</span>
+          </div>
+        </div>
+        <div class="mensagem-detalhada oculto">
+          Vá em "Configurar Notificação" para ajustar sons, tipo de aviso e prioridade dos alertas enviados pelo EcoSense.
+        </div>
+
+        <div class="passo-card" onclick="toggleMensagem(3)">
+          <img src="assets/img/suporte.png" alt="Suporte" />
+          <div class="passo-texto">
+            <strong>4. Fale com o suporte</strong>
+            <span>Clique para saber como receber ajuda técnica.</span>
+          </div>
+        </div>
+        <div class="mensagem-detalhada oculto">
+          Se houver qualquer falha no sistema, acesse a aba "Assistência Técnica" e envie um chamado com descrição e foto, se possível.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="bottom-nav">
+    <a href="inicio.html"><img src="assets/img/Inicio.png" alt="Inicio" /></a>
+    <a href="pesquisa.html"><img src="assets/img/search.png" alt="Pesquisa" /></a>
+    <a href="notificacao.html"><img src="assets/img/notificação.png" alt="Notificação" /></a>
+
+  <!-- Botão de menu flutuante -->
+  <div class="menu-float">
+    <button id="menuToggle">☰</button>
+  </div>
+
+  <!-- Overlay e menu lateral -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-panel" id="menuPanel">
+    <ul>
+      <li><a href="perfil.html">👤 Perfil</a></li>
+      <li>
+        <button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button>
+      </li>
+      <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </div>
+</nav>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

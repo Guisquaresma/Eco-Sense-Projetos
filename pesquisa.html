@@ -8,38 +8,56 @@
 </head>
 <body>
   <div class="app-container">
-    <header class="header">
-      <img class="icon-chevron-left" src="img/voltar.png" alt="Voltar" />
-      <h1 class="titulo">Pesquisa</h1>
-      <img class="logo" src="img/Logo.png" alt="Logo" />
-    </header>
+    <header>
+    <div class="header-content">
+      <a href="inicio.html">
+        <img class="voltar" src="assets/img/voltar.png" alt="Chat" class="icon-left">
+      </a>
+      <h1>Pesquisa</h1>
+      <img src="assets/img/Logo.png" alt="Logo ES" class="icon-right">
+    </div>
+  </header>
 
     <main class="conteudo">
       <div class="input-box">
-        <input type="text" placeholder="Digite sua busca..." />
-        <img src="img/pesquisa.png" alt="Buscar" />
+        <input type="text" id="search-input" placeholder="Digite sua busca..." />
+        <button class="search-btn">Buscar</button>
       </div>
 
       <h2 class="subtitulo">Histórico de pesquisa</h2>
 
-      <div class="historico">
-        <div class="item">Vazamento de água</div>
-        <div class="item">Vazamento de gás</div>
-        <div class="item">Localização</div>
-        <div class="item">Instruções</div>
-        <div class="mais">Mais...</div>
+      <ul id="history-list" class="historico"></ul>
+      <div class="history-actions">
+        <button class="clear-btn">Apagar Histórico</button>
+        <button class="view-more-btn">Ver Mais</button>
       </div>
     </main>
-
-    <nav class="tab-bar">
-      <img src="home0.svg" alt="Início" />
-      <img src="search0.svg" alt="Buscar" />
-      <div class="notification">
-        <img src="bell0.svg" alt="Notificações" />
-        <span class="badge">1</span>
-      </div>
-      <img src="iconmonstr-menu-1-10.svg" alt="Menu" />
-    </nav>
   </div>
+
+    <nav class="bottom-nav">
+    <a href="inicio.html"><img src="assets/img/Inicio.png" alt="Início"></a>
+    <a href="pesquisa.html"><img src="assets/img/search.png" alt="Pesquisar"></a>
+    <a href="notificacao.html"><img src="assets/img/notificação.png" alt="Notificações"></a>
+
+  <!-- Botão de menu flutuante -->
+  <div class="menu-float">
+    <button id="menuToggle">☰</button>
+  </div>
+
+  <!-- Overlay e menu lateral -->
+  <div class="menu-overlay" id="menuOverlay"></div>
+  <div class="menu-panel" id="menuPanel">
+    <ul>
+      <li><a href="perfil.html">👤 Perfil</a></li>
+      <li>
+        <button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button>
+      </li>
+      <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
+      <li><a href="index.html">🚪 Sair</a></li>
+    </ul>
+  </div>
+ </nav>
+
+  <script src="assets/js/pesquisa.js"></script>
 </body>
 </html>
