@@ -7,33 +7,35 @@
   <link rel="stylesheet" href="assets/css/style-login.css" />
 </head>
 <body>
-    <div>
-        <img src="assets/img/logo com nome.png" alt="Logo Eco'Sense" class="logo" />
-    </div>
-    <div class="login-box">
-      
-      <h1>Bem-vindo(a) ao Eco’Sense!</h1>
-
-      <div class="input-group">
-        <input type="email" placeholder="E-mail:" />
-        <img src="assets/img/usuario.png" alt="Ícone Usuário" />
-      </div>
-
-      <div class="input-group">
-        <input type="password" id="senha" placeholder="Senha:" />
-        <img src="assets/img/ver-senha.png" id="toggleSenha" alt="Ícone Senha" />
-      </div>      
-      
-
-      <a href="#" class="link">Alterar e-mail e senha.</a>
-
-      <a href="inicio.html">
-        <button class="entrar-btn">Entrar</button>
-      </a>
-    </div>
-
-    <div class="home-indicator"></div>
+  <div>
+    <img src="assets/img/logo com nome.png" alt="Logo Eco'Sense" class="logo" />
   </div>
+
+  <div class="login-box">
+    <h1>Bem-vindo(a) ao Eco’Sense!</h1>
+
+    <form id="loginForm">
+  <div class="input-group">
+    <input type="email" id="email" placeholder="E-mail" required />
+    <img src="assets/img/usuario.png" alt="Ícone Usuário" />
+  </div>
+
+  <div class="input-group">
+    <input type="password" id="senha" placeholder="Senha" required />
+    <img src="assets/img/ver-senha.png" id="toggleSenha" alt="Ícone Senha" />
+  </div>      
+
+  <a href="#" class="link">Alterar senha.</a>
+
+  <!-- Mensagens de erro aqui -->
+  <div id="mensagem-erro" class="erro"></div>
+
+  <button type="submit" class="entrar-btn">Entrar</button>
+</form>
+
+    <a href="#" class="link-2">Solicitar ajuda</a>
+  </div>
+
   <script src="assets/js/login.js"></script>
 </body>
 </html>
