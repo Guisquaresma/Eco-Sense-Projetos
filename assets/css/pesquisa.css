@@ -186,8 +186,7 @@ header h1 {
 .bottom-nav a:hover img {
   transform: scale(1.1);
   opacity: 0.8;
-  /* ou adicione sombra, se preferir: */
-  /* filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3)); */
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
 
  /* Menu flutuante */

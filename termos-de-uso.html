@@ -4,66 +4,63 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Termos de Uso - EcoSense</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/termos-de-uso.css" />
 </head>
 <body>
-   <header>
+  <!-- HEADER -->
+  <header>
     <div class="header-content">
       <a href="inicio.html">
-        <img class="voltar" src="assets/img/voltar.png" alt="Chat" class="icon-left">
+        <img class="voltar" src="assets/img/voltar.png" alt="Voltar">
       </a>
       <h1>Termos de Uso</h1>
-      <img src="assets/img/Logo.png" alt="Logo ES" class="icon-right">
+      <img src="assets/img/Logo.png" alt="Logo ES" class="logo-topo">
     </div>
   </header>
 
+  <!-- CONTEÚDO PRINCIPAL -->
   <main class="termos-container">
-    <section class="termos-texto">
+    <section class="termos-box">
       <p>Bem-vindo ao EcoSense! Ao utilizar nosso aplicativo, você concorda com os seguintes termos e condições:</p>
 
-      <h3>1. Uso do Aplicativo</h3>
+      <h3>1. <span>Uso do Aplicativo</span></h3>
       <p>O EcoSense oferece funcionalidades para monitoramento e alerta de vazamentos de água e gás em ambientes residenciais e comerciais. O uso deve ser feito de maneira responsável e conforme a legislação vigente.</p>
 
-      <h3>2. Responsabilidades</h3>
+      <h3>2. <span>Responsabilidades</span></h3>
       <p>O usuário é responsável por manter os sensores corretamente instalados e por agir conforme os alertas emitidos. O app não substitui assistência técnica presencial.</p>
 
-      <h3>3. Privacidade</h3>
+      <h3>3. <span>Privacidade</span></h3>
       <p>Os dados coletados são utilizados exclusivamente para melhorar a experiência do usuário e não serão compartilhados com terceiros sem consentimento.</p>
 
-      <h3>4. Atualizações</h3>
+      <h3>4. <span>Atualizações</span></h3>
       <p>Estes termos podem ser atualizados periodicamente. Recomendamos verificar regularmente esta seção para manter-se informado.</p>
 
-      <h3>5. Suporte</h3>
+      <h3>5. <span>Suporte</span></h3>
       <p>Em caso de dúvidas, entre em contato com nosso suporte técnico através do menu de assistência no app.</p>
     </section>
   </main>
 
-    <nav class="bottom-nav">
-     <a href="inicio.html"><img src="assets/img/Inicio.png" alt="Inicio" /></a>
-     <a href="pesquisa.html"><img src="assets/img/search.png" alt="Pesquisa" /></a>
-     <a href="notificacao.html"><img src="assets/img/notificação.png" alt="Notificação" /></a>
+  <!-- NAVEGAÇÃO INFERIOR -->
+  <nav class="bottom-nav">
+    <a href="inicio.html"><img src="assets/img/Inicio.png" alt="Início"></a>
+    <a href="pesquisa.html"><img src="assets/img/search.png" alt="Pesquisar"></a>
+    <a href="notificacao.html"><img src="assets/img/notificação.png" alt="Notificações"></a>
 
-     <!-- Botão de menu flutuante -->
-     <div class="menu-float">
+    <div class="menu-float">
       <button id="menuToggle">☰</button>
-     </div>
+    </div>
 
-     <!-- Overlay e menu lateral -->
-     <div class="menu-overlay" id="menuOverlay"></div>
-  <div class="menu-panel" id="menuPanel">
-    <ul>
-      <li><a href="perfil.html">👤 Perfil</a></li>
-      <li>
-        <button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button>
-      </li>
-      <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
-      <li><a href="index.html">🚪 Sair</a></li>
-    </ul>
-  </div>
-    </nav>
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-panel" id="menuPanel">
+      <ul>
+        <li><a href="perfil.html">👤 Perfil</a></li>
+        <li><button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button></li>
+        <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
+        <li><a href="index.html">🚪 Sair</a></li>
+      </ul>
+    </div>
+  </nav>
 
-
-
-<script src="assets/js/script.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>

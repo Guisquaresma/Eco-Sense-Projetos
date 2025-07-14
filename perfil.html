@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Perfil - EcoSense</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/perfil.css" />
 </head>
 <body>
 
@@ -21,7 +21,9 @@
   <!-- Conteúdo principal -->
   <main class="perfil-container">
     <div class="perfil-avatar">
-      <img src="assets/img/logo com nome.png" alt="Foto do usuário">
+      <div class="circulo-avatar">
+        <img src="assets/img/logo com nome.png" alt="Foto do usuário">
+      </div>
     </div>
 
     <div class="perfil-info">
@@ -36,25 +38,22 @@
     <a href="inicio.html"><img src="assets/img/Inicio.png" alt="Início"></a>
     <a href="pesquisa.html"><img src="assets/img/search.png" alt="Pesquisar"></a>
     <a href="#"><img src="assets/img/notificação.png" alt="Notificações"></a>
-    <!-- Botão de menu flutuante -->
-    <div class="menu-float">
-        <button id="menuToggle">☰</button>
-      </div>
-  
-      <!-- Overlay e menu lateral -->
-      <div class="menu-overlay" id="menuOverlay"></div>
-  <div class="menu-panel" id="menuPanel">
-    <ul>
-      <li><a href="perfil.html">👤 Perfil</a></li>
-      <li>
-        <button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button>
-      </li>
-      <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
-      <li><a href="index.html">🚪 Sair</a></li>
-    </ul>
-  </div> 
-    </nav>
-</body>
 
-<script src="assets/js/script.js"></script>
+    <div class="menu-float">
+      <button id="menuToggle">☰</button>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="menu-panel" id="menuPanel">
+      <ul>
+        <li><a href="perfil.html">👤 Perfil</a></li>
+        <li><button onclick="redirecionarParaConfiguracoes()">⚙️ Configurações</button></li>
+        <li><a href="termos-de-uso.html">📄 Termos de uso</a></li>
+        <li><a href="index.html">🚪 Sair</a></li>
+      </ul>
+    </div> 
+  </nav>
+
+  <script src="assets/js/script.js"></script>
+</body>
 </html>

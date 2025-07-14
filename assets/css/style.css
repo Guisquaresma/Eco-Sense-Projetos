@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -8,17 +7,17 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
-  color: #333;
+}
+header {
+  background-color: white;
+  padding: 0.7rem;
+  border-bottom: 2px solid #3e9679;
 }
 
-.top-bar {
-  position: relative;
-  height: 60px;
+.header-content {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  padding: 0 16px;
-  background-color: white;
+  margin: 5px;
 }
 
 .nome-central {
@@ -28,103 +27,191 @@ body {
   height: 24px;
 }
 
-.logoEcoSense {
-  height: 28px;
+  .icon-right {
+    width: 24px;
+    height: 24px;
+  }
+
+header h1 {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 1.25rem;
+  color: #3e9679;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.header .titulo {
+  color: #3f9573;
+  font-size: 1.2rem;
+  font-weight: 900;
+  margin: 0 auto;
+}
+
+.logo {
+  width: 40px;
+  height: 36px;
+}
+
+.icon-chevron-left {
+  width: 24px;
+  height: 24px;
+}
+
+/* SEÇÃO HISTÓRICO */
+
 .history {
+  margin: 16px;
   padding: 16px;
   background-color: #d3f0e5;
-  border-radius: 12px;
-  max-width: 400px;
-  margin: 16px auto;
+  border-radius: 16px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 .history h2 {
-  font-size: 1.125rem;
-  margin-bottom: 12px;
+  font-size: 1.1rem;
   font-weight: bold;
+  margin-bottom: 12px;
+  color: #0d5c3a;
 }
 
 .carousel {
   position: relative;
+  border-radius: 12px;
   overflow: hidden;
-  border-radius: 8px;
-  padding: 10px;
 }
 
 .carousel-inner {
   display: flex;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease;
 }
 
 .carousel-item {
   min-width: 100%;
   text-align: center;
-  padding: 10px;
 }
 
 .carousel img {
   width: 100%;
-  border-radius: 6px;
-  margin-bottom: 6px;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 8px;
 }
+
+/* BOTÕES DE NAVEGAÇÃO */
 
 .prev,
 .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: #10744C;
+  background-color: #10744c;
   color: white;
   border: none;
-  padding: 10px;
-  cursor: pointer;
-  border-radius: 50%;
   font-size: 18px;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 10;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.prev {
+  left: 8px;
+}
+.next {
+  right: 8px;
+}
+
+.carousel-item p {
+  font-size: 0.95rem;
+  margin-top: 4px;
+}
+
+/* BOTÕES DE AÇÕES */
 
 .options {
+  padding: 16px;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
   padding: 16px;
 }
 
 .option-btn {
   width: 100%;
+  max-width: 400px;
   background-color: #d3f0e5;
   border: none;
-  padding: 12px;
-  margin-bottom: 10px;
+  padding: 14px;
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
-  border-radius: 6px;
+  border-radius: 8px;
+  color: #0d5c3a;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease;
 }
 
+.options a {
+  text-decoration: none;
+}
+
+.option-btn:hover {
+  background-color: #b6e4d4;
+}
+
+/* Navegação inferior */
 .bottom-nav {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background-color: #10744C;
+  background-color: #10744c;
   display: flex;
   justify-content: space-around;
   padding: 10px 0;
-  z-index: 1000;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  position: relative;
+  cursor: pointer;
 }
 
 .bottom-nav a img {
-  width: 24px;
-  height: 24px;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 .bottom-nav a:hover img {
   transform: scale(1.1);
   opacity: 0.8;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
 }
+
+/* MENU FLUTUANTE */
 
 .menu-float {
   position: fixed;
@@ -134,7 +221,7 @@ body {
 }
 
 .menu-float button {
-  background-color: #10744C;
+  background-color: #10744c;
   color: white;
   border: none;
   font-size: 26px;
@@ -142,23 +229,11 @@ body {
   width: 56px;
   height: 56px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: background-color 0.3s ease;
-}
-
-.menu-float button:hover {
-  background-color: #0d5c3a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .menu-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
   display: none;
-  z-index: 1000;
 }
 
 .menu-panel {
@@ -167,8 +242,58 @@ body {
   right: -260px;
   width: 240px;
   height: 100%;
+  background-color: white;
+  transition: right 0.3s ease;
+  z-index: 1002;
+  padding-top: 60px;
+}
+
+/* Menu flutuante */
+.menu-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 1001;
+}
+
+.menu-float button {
+  background-color: #10744c;
+  color: white;
+  border: none;
+  font-size: 26px;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease;
+}
+
+.menu-float button:hover {
+  background-color: #0d5c3a;
+}
+
+/* Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000;
+}
+
+/* Painel lateral */
+.menu-panel {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 240px;
+  height: 100%;
   background-color: #ffffff;
-  box-shadow: -2px 0 6px rgba(0,0,0,0.2);
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.2);
   transition: right 0.3s ease;
   z-index: 1002;
   padding-top: 60px;
@@ -183,61 +308,44 @@ body {
   margin-bottom: 20px;
 }
 
-.menu-panel ul li a,
-.menu-panel button {
+.menu-panel ul li a {
   text-decoration: none;
   font-size: 16px;
-  color: #10744C;
+  color: #10744c;
   font-weight: bold;
   display: block;
 }
 
+.menu-panel button {
+  text-decoration: none;
+  font-size: 16px;
+  color: #10744c;
+  font-weight: bold;
+  display: block;
+}
+
+.configuracao {
+  text-decoration: none;
+  font-size: 16px;
+  color: #10744c;
+  font-weight: bold;
+  display: block;
+}
+
+/* RESPONSIVO */
+
 @media (max-width: 480px) {
   .history {
-    padding: 12px;
-    max-width: 100%;
-  }
-
-  .option-btn {
-    font-size: 0.95rem;
-    padding: 10px;
-  }
-
-  .top-bar {
-    padding: 0 8px;
+    margin: 12px;
+    padding: 14px;
   }
 
   .carousel img {
     max-height: 200px;
-    object-fit: cover;
-  }
-
-  .bottom-nav a img {
-    width: 20px;
-    height: 20px;
-  }
-
-  .menu-panel {
-    width: 200px;
-  }
-
-  .menu-float button {
-    width: 48px;
-    height: 48px;
-    font-size: 22px;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .history {
-    max-width: 90%;
   }
 
   .option-btn {
-    font-size: 1rem;
-  }
-
-  .carousel img {
-    max-height: 250px;
+    font-size: 0.95rem;
+    padding: 12px;
   }
 }
